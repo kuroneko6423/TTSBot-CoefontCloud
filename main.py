@@ -147,7 +147,7 @@ async def help(ctx):
         value = "ヘルプを表示します。"
     )
     helpEmbed.add_field(
-        name = "v!ping",
+        name = "v!invite",
         value = "招待リンクを表示します。"
     )
     helpEmbed.add_field(
