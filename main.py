@@ -40,6 +40,7 @@ if IS_PREMIUM:
     premium = TinyDB("premium.json")
 
 bot = commands.Bot(command_prefix=PREFIX)
+bot.remove_command('help')
 
 chs = {}
 queue_dict = defaultdict(deque)
