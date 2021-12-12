@@ -116,6 +116,24 @@ def enqueue(voice_client, guild, source):
 @bot.event
 async def on_ready():
     print('Ready!')
+    await client.change_presence(
+        activity=discord.Activity(
+            type=discord.ActivityType.playing,
+            name=f'{PREFIX}help | {len(client.guilds)}サーバーで稼働中'))
+
+@bot.event
+async def on_guild_join(guild):
+    await client.change_presence(
+        activity=discord.Activity(
+            type=discord.ActivityType.playing,
+            name=f'{PREFIX}help | {len(client.guilds)}サーバーで稼働中'))
+
+@bot.event
+async def on_guild_leave(guild):
+    await client.change_presence(
+        activity=discord.Activity(
+            type=discord.ActivityType.playing,
+            name=f'{PREFIX}help | {len(client.guilds)}サーバーで稼働中'))
 
 
 @bot.command(name='premium')
