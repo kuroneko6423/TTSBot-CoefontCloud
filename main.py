@@ -118,27 +118,27 @@ def enqueue(voice_client, guild, source):
 async def on_ready():
     print('Ready!')
     await client.change_presence(
-        activity=discord.Activity(
-            type=discord.ActivityType.playing,
+        activity=nextcord.Activity(
+            type=nextcord.ActivityType.playing,
             name=f'{PREFIX}help | {len(client.guilds)}サーバーで稼働中'))
 
 @bot.event
 async def on_guild_join(guild):
     await client.change_presence(
-        activity=discord.Activity(
-            type=discord.ActivityType.playing,
+        activity=nextcord.Activity(
+            type=nextcord.ActivityType.playing,
             name=f'{PREFIX}help | {len(client.guilds)}サーバーで稼働中'))
 
 @bot.event
 async def on_guild_leave(guild):
     await client.change_presence(
-        activity=discord.Activity(
-            type=discord.ActivityType.playing,
+        activity=nextcord.Activity(
+            type=nextcord.ActivityType.playing,
             name=f'{PREFIX}help | {len(client.guilds)}サーバーで稼働中'))
 
 @bot.command(name='help')
 async def help(ctx):
-    helpEmbed = discord.Embed(title="Help / ヘルプ",description="")
+    helpEmbed = nextcord.Embed(title="Help / ヘルプ",description="")
     helpEmbed.add_field(
         name = "v!ping",
         value = "応答速度を測定します。"
