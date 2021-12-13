@@ -175,18 +175,17 @@ async def help(ctx):
         name = "v!premium add [サーバーID]",
         value = "有料サーバーを追加します。※運営のみ"
     )
-    embed.set_footer(text="Developed by cron",
+    helpEmbed.set_footer(text="Developed by cron",
                      icon_url="https://cdn.discordapp.com/avatars/731503872098697226/f4aeb81ec1d493ed2b491aaed9103f9c.png")
-    ctx.message.channel.send(embed=helpEmbed)
+    await ctx.message.channel.send(embed=helpEmbed)
 
 @bot.command(name='invite')
 async def invite(ctx):
-    ctx.send(INVITE_LINK)
+    await ctx.send(INVITE_LINK)
 
 @bot.command(name='ping')
 async def ping(ctx):
-    ctx.send(f"Ping: {round(bot.latency * 1000)}ms")
-
+    await ctx.send(f"Ping: {round(bot.latency * 1000)}ms")
 
 @bot.command(name='premium')
 async def prem(ctx, arg, arg2):
