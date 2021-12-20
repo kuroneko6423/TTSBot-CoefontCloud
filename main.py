@@ -144,39 +144,39 @@ async def on_guild_leave(guild):
 async def help(ctx):
     helpEmbed = nextcord.Embed(title="Help / ヘルプ",description="")
     helpEmbed.add_field(
-        name = "v!ping",
+        name = "r!ping",
         value = "応答速度を測定します。"
     )
     helpEmbed.add_field(
-        name = "v!help",
+        name = "r!help",
         value = "ヘルプを表示します。"
     )
     helpEmbed.add_field(
-        name = "v!invite",
+        name = "r!invite",
         value = "招待リンクを表示します。"
     )
     helpEmbed.add_field(
-        name = "v!join",
+        name = "r!join",
         value = "VCに参加します。"
     )
     helpEmbed.add_field(
-        name = "v!dc",
+        name = "r!dc",
         value = "VCから切断します。"
     )
     helpEmbed.add_field(
-        name = "v!setvoice [ボイス名]",
+        name = "r!setvoice [ボイス名]",
         value = "喋る人を変更します。ボイス名なしでボイス一覧を表示します。"
     )
     helpEmbed.add_field(
-        name = "v!dict add [テキスト] [読み上げ]",
+        name = "r!dict add [テキスト] [読み上げ]",
         value = "辞書に単語を追加します。"
     )
     helpEmbed.add_field(
-        name = "v!gdict add [テキスト] [読み上げ]",
+        name = "r!gdict add [テキスト] [読み上げ]",
         value = "全体辞書に単語を追加します。※運営のみ"
     )
     helpEmbed.add_field(
-        name = "v!premium add [サーバーID]",
+        name = "r!premium add [サーバーID]",
         value = "有料サーバーを追加します。※運営のみ"
     )
     helpEmbed.set_footer(text="Developed by cron",
@@ -185,7 +185,7 @@ async def help(ctx):
 
 @bot.command(name='invite')
 async def invite(ctx):
-    await ctx.send(INVITE_LINK)
+    await ctx.send('INVITE_LINK')
 
 @bot.command(name='ping')
 async def ping(ctx):
