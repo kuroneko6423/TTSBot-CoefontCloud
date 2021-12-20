@@ -215,9 +215,9 @@ async def setvoice(ctx, *args):
                     voices.update({"voice": PREMIUM_COEFONTS[args[0]]}, qwy.id == ctx.message.guild.id)
                 else:
                     voices.insert({"id": ctx.message.guild.id, "voice": PREMIUM_COEFONTS[args[0]]})
+                await ctx.send("設定しました。")
             else:
                 await ctx.send("有料版でのみお使いいただけます。")
-            await ctx.send("設定しました。")
         else:
             await ctx.send("選択肢は以下の通りです。\n無料版: " + ", ".join(FREE_COEFONTS) + "\n有料版: " + ", ".join(PREMIUM_COEFONTS))
 
