@@ -92,6 +92,7 @@ def filter_str(message, guild):
         text = text.replace(a['key'], a['value'])
 
     text = re.sub('https?://.+$', "リンク省略", text)
+    text = re.sub(f'^{PREFIX}.+$', "", text)
 
     return text
 
